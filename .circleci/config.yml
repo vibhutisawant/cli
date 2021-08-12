@@ -96,7 +96,7 @@ jobs:
                 -e GOTESTSUM_JUNITFILE=/tmp/junit.xml \
                 --name \
                 test-$CIRCLE_BUILD_NUM cli-builder:$CIRCLE_BUILD_NUM \
-                go version && make test-coverage
+                go version
             docker cp \
                 test-$CIRCLE_BUILD_NUM:/tmp/junit.xml \
                 ./test-results/unit-tests/junit.xml
